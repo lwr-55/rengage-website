@@ -1,6 +1,11 @@
 /*
 Hide color mode toggle in small viewports
  */
+.navbar__inner_rengage {
+  justify-content: space-around;
+  margin-top: 32px;
+}
+
 @media (max-width: 996px) {
   .colorModeToggle {
     display: none;

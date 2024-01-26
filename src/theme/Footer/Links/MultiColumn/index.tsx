@@ -1,6 +1,11 @@
 import React from 'react';
 import LinkItem from '@theme/Footer/LinkItem';
-function ColumnLinkItem({item}) {
+import type {Props} from '@theme/Footer/Links/MultiColumn';
+
+type ColumnType = Props['columns'][number];
+type ColumnItemType = ColumnType['items'][number];
+
+function ColumnLinkItem({item}: {item: ColumnItemType}) {
   return item.html ? (
     <li
       className="footer__item"
@@ -14,7 +19,8 @@ function ColumnLinkItem({item}) {
     </li>
   );
 }
-function Column({column}) {
+
+function Column({column}: {column: ColumnType}) {
   return (
     <div className="col footer__col">
       <div className="footer__title">{column.title}</div>
@@ -26,7 +32,8 @@ function Column({column}) {
     </div>
   );
 }
-export default function FooterLinksMultiColumn({columns}) {
+
+export default function FooterLinksMultiColumn({columns}: Props): JSX.Element {
   return (
     <div className="row footer__links">
       {columns.map((column, i) => (

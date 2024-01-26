@@ -1,5 +1,7 @@
 import React from 'react';
-export default function FooterCopyright({copyright}) {
+import type {Props} from '@theme/Footer/Copyright';
+
+export default function FooterCopyright({copyright}: Props): JSX.Element {
   return (
     <div
       className="footer__copyright"

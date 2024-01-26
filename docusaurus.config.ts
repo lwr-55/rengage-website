@@ -52,13 +52,15 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/social-card.png',
+    colorMode: {
+      disableSwitch: true,
+    },
     navbar: {
-      title: 'Rengage',
+      title: '',
       logo: {
         alt: 'Rengage Logo',
-        src: 'img/logo.png',
+        src: 'img/logo.svg',
       },
       items: [
         {
@@ -89,8 +91,8 @@ const config: Config = {
           ]
         },
         {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
+          content: 'Book a demo',
+          type: 'custom-button-navbar-item',
           position: 'right',
         },
       ],

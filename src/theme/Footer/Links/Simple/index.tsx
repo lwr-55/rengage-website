@@ -1,9 +1,12 @@
 import React from 'react';
 import LinkItem from '@theme/Footer/LinkItem';
+import type {Props} from '@theme/Footer/Links/Simple';
+
 function Separator() {
   return <span className="footer__link-separator">·</span>;
 }
-function SimpleLinkItem({item}) {
+
+function SimpleLinkItem({item}: {item: Props['links'][number]}) {
   return item.html ? (
     <span
       className="footer__link-item"
@@ -15,7 +18,8 @@ function SimpleLinkItem({item}) {
     <LinkItem item={item} />
   );
 }
-export default function FooterLinksSimple({links}) {
+
+export default function FooterLinksSimple({links}: Props): JSX.Element {
   return (
     <div className="footer__links text--center">
       <div className="footer__links">
