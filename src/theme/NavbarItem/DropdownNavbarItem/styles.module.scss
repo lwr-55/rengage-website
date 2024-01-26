@@ -1,0 +1,37 @@
+.dropdownNavbarItemMobile {
+  cursor: pointer;
+}
+
+.rengage_dropdown_icon {
+  &::after {
+    width: 20px;
+    height: 20px;
+    border: none !important;
+    transform: none !important;
+    top: 4px !important;
+    background: url(/img/arrow-down.svg);
+  }
+
+  &:hover {
+    &::after {
+      background: url(/img/arrow-down-hover.svg);
+    }
+  }
+}
+
+.rengage_dropdown__menu {
+  padding: 0px !important;
+  border-radius: 1rem;
+
+  :global {
+    .dropdown__link {
+      padding: 1.5rem;
+      margin-top: 0px;
+      border-radius: 1rem;
+
+      &:hover {
+        background: #EBDBFF;
+      }
+    }
+  }
+}

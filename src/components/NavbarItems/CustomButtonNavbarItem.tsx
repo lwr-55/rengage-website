@@ -6,17 +6,12 @@
  */
 
 import React from 'react';
-import { useLocation } from '@docusaurus/router';
 
 export default function CustomDogfoodNavbarItem(props: {
   content: string;
   mobile?: boolean;
 }): JSX.Element | null {
-  const { pathname } = useLocation();
-  const shouldRender = pathname === '/tests' || pathname.startsWith('/tests/');
-  if (!shouldRender) {
-    return null;
-  }
+
   return (
     <button
       onClick={() => {

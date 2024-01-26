@@ -16,3 +16,6 @@
   --ifm-heading-font-family: Poppins;
 }
 
+:where(.button--secondary:not(:hover)) {
+  --ifm-button-border-color: #000;
+}
