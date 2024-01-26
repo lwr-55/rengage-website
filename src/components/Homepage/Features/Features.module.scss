@@ -1,0 +1,111 @@
+.features-container {
+    background: var(--Gradient-BG, linear-gradient(180deg, #EFE6FB 10.5%, rgba(255, 255, 255, 0.00) 100%));
+    display: flex;
+    padding-top: 100px;
+    flex-direction: column;
+    align-items: center;
+    gap: 72px;
+
+    .features-text {
+        text-align: center;
+        max-width: 750px;
+
+        h2 {
+            font-size: 48px;
+        }
+
+        p {
+            font-size: 20px;
+            color: #1A2339;
+        }
+    }
+
+    .features-content {
+        padding: 0 80px;
+        border-radius: 16px;
+        display: flex;
+
+        .feature-container {
+            border: 1px solid #FFF;
+            min-width: 426px;
+            backdrop-filter: blur(25px);
+        }
+
+        .feature-container-solid {
+            background: rgba(255, 255, 255, 0.40);
+            border-radius: 16px;
+        }
+
+        .feature-container-fill {
+            background: #FFFFFF;
+            box-shadow: 0px 0px 80px 0px rgba(10, 32, 45, 0.05);
+        }
+
+        .content-text {
+            display: flex;
+            padding: 32px 24px 16px 24px;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+            align-self: stretch;
+
+            .text-property {
+                line-height: 24px;
+                border-radius: 16px;
+                padding: 4px 12px;
+                color: var(--09001-c, #09001C);
+                line-height: 120%;
+            }
+
+            .text-property-solid {
+                border: 1px solid #8542C3;
+            }
+
+            .text-property-fill {
+                background-color: #8542C3;
+                color: #fff;
+            }
+
+            .text-action {
+                color: var(--Greyscale-1000, #1A2339);
+                text-align: center;
+                font-family: Sora;
+                font-size: 26px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 130%;
+            }
+
+            .text-paragraph {
+                color: var(--Greyscale-1000, #1A2339);
+                text-align: center;
+                font-family: Poppins;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 150%;
+            }
+        }
+
+        .content-card {
+            display: flex;
+            justify-content: center;
+            padding: 32px 0;
+            flex-direction: column;
+            gap: 8.361px;
+            align-items: center;
+
+            .ins {
+                box-shadow: 0 0 20px rgba(38, 17, 98, 0.13);
+            }
+
+            .ins1 {
+                width: 187px;
+            }
+
+            .ins2 {
+                width: 224px;
+            }
+        }
+    }
+}
