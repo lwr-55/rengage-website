@@ -43,14 +43,14 @@ const swiperColumn = [
       "TechStart Inc., a tech leader, saw a 40% boost in new customer activation through Rengage's Journey Builder, transforming their approach and driving substantial user engagement growth.",
   },
   {
-    tag:<DoordashTag />,
-    title:"Driving Customer Retention",
-    description:"TechStart Inc., a tech leader, saw a 40% boost in new customer activation through Rengage's Journey Builder, transforming their approach and driving substantial user engagement growth."
+    tag: <DoordashTag />,
+    title: "Driving Customer Retention",
+    description: "TechStart Inc., a tech leader, saw a 40% boost in new customer activation through Rengage's Journey Builder, transforming their approach and driving substantial user engagement growth."
   },
   {
-    tag:<ReduceTag/>,
-    title:"Reducing Customer Churn",
-    description:"TechStart Inc., a tech leader, saw a 40% boost in new customer activation through Rengage's Journey Builder, transforming their approach and driving substantial user engagement growth."
+    tag: <ReduceTag />,
+    title: "Reducing Customer Churn",
+    description: "TechStart Inc., a tech leader, saw a 40% boost in new customer activation through Rengage's Journey Builder, transforming their approach and driving substantial user engagement growth."
   }
 ];
 
@@ -167,17 +167,17 @@ export default function Home(): JSX.Element {
             <div className={styles.swipe}>
               {swiperColumn.map(item => (
                 <div className={styles.swipe_item}>
-                <div className={styles.tag}>
-                  {item.tag}
+                  <div className={styles.tag}>
+                    {item.tag}
+                  </div>
+                  <div className={styles.text}>
+                    <p className={styles.title}>{item.title}</p>
+                    <p className={styles.description}>
+                      {item.description}
+                    </p>
+                    <button>Read more</button>
+                  </div>
                 </div>
-                <div className={styles.text}>
-                  <p className={styles.title}>{item.title}</p>
-                  <p className={styles.description}>
-                    {item.description}
-                  </p>
-                  <button>Read more</button>
-                </div>
-              </div>
               ))}
             </div>
             <div className={styles.empty}></div>
