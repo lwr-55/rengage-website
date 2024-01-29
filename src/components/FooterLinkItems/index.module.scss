@@ -1,0 +1,20 @@
+.footer_logo {
+    width: 116px;
+    height: 30px;
+}
+
+.footer_logo_des {
+    color: var(--Greyscale-800, #5E6678);
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    margin: 24px 0 40px 0;
+}
+.footer_logo_btn {
+    &>button {
+        background: var(--Greyscale-Black, #131A2B);
+        border-color: #131A2B;
+    }
+}

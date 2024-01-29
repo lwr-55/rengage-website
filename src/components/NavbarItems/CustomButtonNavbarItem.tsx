@@ -5,7 +5,9 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+import clsx from 'clsx';
 import React from 'react';
+import styles from './index.module.scss';
 
 export default function CustomDogfoodNavbarItem(props: {
   content: string;
@@ -13,14 +15,23 @@ export default function CustomDogfoodNavbarItem(props: {
 }): JSX.Element | null {
 
   return (
-    <button
-      onClick={() => {
-        alert("I'm a Book a demo");
-      }}
-      className="button button--outline button--secondary"
-    >
-      {props.content}
-      {props.mobile ? ' (mobile)' : ''}
-    </button>
+    <div className={clsx({
+      'navbar__item': !props.mobile,
+      [styles.mobile_buttom]: !!props.mobile,
+      })}>
+      <button
+        onClick={() => {
+          alert("I'm a Book a demo");
+        }}
+        className={clsx(
+          'button button--outline button--secondary',
+          {
+            'button--block': !!props.mobile,
+          }
+        )}
+      >
+        {props.content}
+      </button>
+    </div>
   );
 }
