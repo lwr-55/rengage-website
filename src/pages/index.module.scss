@@ -113,6 +113,11 @@
                 border: 1px solid #FFF;
                 min-width: 426px;
                 backdrop-filter: blur(25px);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .btn {}
             }
 
             .feature-container-solid {

@@ -70,6 +70,9 @@ export default function Home(): JSX.Element {
                 <div className={styles['content-card']}>
                   <feature.svg />
                 </div>
+                {/* <Link className={clsx('button button--lg', styles['primary-btn'], styles['btn'])}>
+                  Learn more
+                </Link> */}
               </div>
             ))}
           </div>

@@ -14,7 +14,7 @@
 
 @media (max-width: 996px) {
     :root {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .homepage-container {
@@ -27,7 +27,13 @@
             .banner-text {
                 align-items: center;
 
-                .title {}
+                .title {
+                    text-align: center;
+                }
+
+                .small {
+                    text-align: center;
+                }
             }
 
             .banner-ellipse {
@@ -40,6 +46,25 @@
             .banner-img {
                 background-image: url('/static/img/homepage/homepage-banner-mobile.svg') !important;
                 min-width: 90% !important;
+            }
+        }
+    }
+
+    .features-container {
+        .features-text {
+            .title {
+                text-align: center;
+            }
+        }
+
+        .features-content {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+
+            .feature-container {
+                border-radius: 16px !important;
             }
         }
     }
