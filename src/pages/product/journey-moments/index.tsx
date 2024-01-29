@@ -4,14 +4,18 @@ import Layout from "@theme/Layout";
 import HomepageFeatures from "@site/src/components/HomepageFeatures";
 import Heading from "@theme/Heading";
 import styles from "./index.module.scss";
-import FramecardPC from "./images/unlockPc.svg";
-import AskAI from "./images/askAI.svg";
-import ErrorLess from "./images/effortLess.svg";
-import Holistic from "./images/holistic.svg";
-import RealTime from "./images/realTime.svg";
-import Person from "./images/person.svg";
-import Wind from "./images/wind.svg";
-import PingPong from "./images/pingPong.svg";
+import AskAI from "../../../../static/img/product/journey-moments/askAI.svg";
+import ErrorLess from "../../../../static/img/product/journey-moments/effortLess.svg";
+import Holistic from "../../../../static/img/product/journey-moments/holistic.svg";
+import RealTime from "../../../../static/img/product/journey-moments/realTime.svg";
+import Person from "../../../../static/img/product/journey-moments/person.svg";
+import Wind from "../../../../static/img/product/journey-moments/wind.svg";
+import PingPong from "../../../../static/img/product/journey-moments/pingPong.svg";
+import LeftBtn from "../../../../static/img/product/journey-moments/leftBtn.svg";
+import RightBtn from "../../../../static/img/product/journey-moments/rightBtn.svg";
+import SlackTag from "../../../../static/img/product/journey-moments/swipeSlack.svg";
+import DoordashTag from '../../../../static/img/product/journey-moments/swipeDoordash.svg';
+import ReduceTag from '../../../../static/img/product/journey-moments/swipeReduc.svg'
 
 const deepColumn = [
   {
@@ -22,22 +26,34 @@ const deepColumn = [
   },
   {
     icon: <Wind />,
-    title: (<span>Visualization and <br />  Actionability</span>),
+    title: "Visualization and Actionability",
     description:
       "Visualize the customer journey like never before, and make data-driven decisions with ease.",
   },
   {
     icon: <PingPong />,
-    title: (
-      <span>
-        Single Source 
-        <br /> 
-        of Truth
-      </span>
-    ),
+    title: "Single Source of Truth",
     description:
       "Journey Moments serves as your central hub for understanding customer paths, preferences, and pain points.",
   },
+];
+const swiperColumn = [
+  {
+    tag: <SlackTag />,
+    title: "Increasing Customer Activation",
+    description:
+      "TechStart Inc., a tech leader, saw a 40% boost in new customer activation through Rengage's Journey Builder, transforming their approach and driving substantial user engagement growth.",
+  },
+  {
+    tag:<DoordashTag />,
+    title:"Driving Customer Retention",
+    description:"TechStart Inc., a tech leader, saw a 40% boost in new customer activation through Rengage's Journey Builder, transforming their approach and driving substantial user engagement growth."
+  },
+  {
+    tag:<ReduceTag/>,
+    title:"Reducing Customer Churn",
+    description:"TechStart Inc., a tech leader, saw a 40% boost in new customer activation through Rengage's Journey Builder, transforming their approach and driving substantial user engagement growth."
+  }
 ];
 
 export default function Home(): JSX.Element {
@@ -59,12 +75,12 @@ export default function Home(): JSX.Element {
                 Take Control of the Customer Journey:Uncover Hidden Insights and
                 Optimize Impack
               </p>
-              <div className={styles.button}>
-                <div className={styles.text}>Explore Journey Moments</div>
-              </div>
+              <button className={styles.button}>
+                <span className={styles.text}>Explore Journey Moments</span>
+              </button>
             </div>
             <div className={styles.bottom}>
-              <FramecardPC />
+              <div className={styles.images}></div>
             </div>
           </div>
           <div className={styles.page_chat}>
@@ -78,7 +94,6 @@ export default function Home(): JSX.Element {
               </p>
             </div>
             <div className={styles.img}>
-              {/* TODO: 解决svg只出现一部分问题 */}
               <AskAI />
             </div>
           </div>
@@ -106,6 +121,8 @@ export default function Home(): JSX.Element {
                 <RealTime />
               </div>
             </div>
+            <div className={styles.empty_purple}></div>
+            <div className={styles.empty_blue}></div>
           </div>
           <div className={styles.page_deep}>
             <div className={styles.text}>
@@ -127,6 +144,45 @@ export default function Home(): JSX.Element {
                 ))}
               </div>
             </div>
+          </div>
+          <div className={styles.page_transform}>
+            <div className={styles.label}>
+              <div className={styles.text}>
+                <p className={styles.title}>
+                  Transforming Customer Journeys with Rengage
+                </p>
+                <p className={styles.description}>
+                  Explore our success stories where Rengage's innovative
+                  solutions have catalyzed transformative growth for diverse
+                  businesses.
+                </p>
+              </div>
+              <div className={styles.button}>
+                <button>
+                  <LeftBtn />
+                </button>
+                <button>
+                  <RightBtn />
+                </button>
+              </div>
+            </div>
+            <div className={styles.swipe}>
+              {swiperColumn.map(item => (
+                <div className={styles.swipe_item}>
+                <div className={styles.tag}>
+                  {item.tag}
+                </div>
+                <div className={styles.text}>
+                  <p className={styles.title}>{item.title}</p>
+                  <p className={styles.description}>
+                    {item.description}
+                  </p>
+                  <button>Read more</button>
+                </div>
+              </div>
+              ))}
+            </div>
+            <div className={styles.empty}></div>
           </div>
         </div>
       </main>
