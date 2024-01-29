@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Rengage website',
-  tagline: 'Dinosaurs are cool',
+  tagline: 'Rengage website2.0',
   favicon: 'img/logo.png',
 
   // Set the production url of your site here
@@ -52,13 +52,15 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/social-card.png',
+    colorMode: {
+      disableSwitch: true,
+    },
     navbar: {
-      title: 'Rengage',
+      title: '',
       logo: {
         alt: 'Rengage Logo',
-        src: 'img/logo.png',
+        src: 'img/logo.svg',
       },
       items: [
         {
@@ -89,51 +91,71 @@ const config: Config = {
           ]
         },
         {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
+          content: 'Book a demo',
+          type: 'custom-button-navbar-item',
           position: 'right',
         },
       ],
     },
     footer: {
-      style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'PRODUCT',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
+              label: 'Journey Moments',
+              to: '/product/journey-moments',
+            },
+            {
+              label: 'Journey Builder',
+              to: '/product/journey-builder',
+            },
+            {
+              label: 'Journey Insights',
+              to: '/product/journey-insights',
             },
           ],
         },
         {
-          title: 'Community',
+          title: 'SOLUTIONS',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'Case Studies',
+              to: '/solutions/case-studies',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              label: 'Solutions',
+              to: '/solutions/solutions',
             },
             {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
+              label: 'Integrations',
+              to: '/solutions/integrations',
             },
           ],
         },
         {
-          title: 'More',
+          title: 'RESOURSES',
           items: [
             {
               label: 'Blog',
-              to: '/blog',
+              to: '/resourses/blog',
             },
             {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              label: 'Documents',
+              to: '/resourses/documents',
+            },
+          ],
+        },
+        {
+          title: 'COMPANY',
+          items: [
+            {
+              label: 'About Us',
+              to: '/company/aboutus',
+            },
+            {
+              label: 'Contacts',
+              to: '/company/contacts',
             },
           ],
         },

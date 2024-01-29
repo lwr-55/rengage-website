@@ -1,0 +1,30 @@
+.rangage_footer {
+    background: var(--Gradient-BG, linear-gradient(180deg, #EFE6FB 10.5%, rgba(255, 255, 255, 0.00) 100%));
+}
+
+.item_color {
+    color: var(--Greyscale-1000, #1A2339);
+    line-height: 1;
+    margin-bottom: 18px;
+    display: inline-block;
+}
+
+
+@media (max-width: 996px) {
+    .rangage_footer {
+        :global {
+            .footer_logo_box {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                width: 100% !important;
+                flex: auto !important;
+            }
+            .footer__col {
+                min-width: 50%;
+                flex: 1;
+            }
+        }
+    }
+}

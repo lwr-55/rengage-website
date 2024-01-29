@@ -12,5 +12,32 @@
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-navbar-height: auto;
+  --ifm-heading-font-family: Poppins;
+  --ifm-heading-margin-bottom: 1.5rem;
 }
 
+:where(.button--secondary:not(:hover)) {
+  --ifm-button-border-color: #000;
+}
+
+@font-face {
+  font-family: "Sora";
+  src: url("/font/Sora.ttf");
+}
+@font-face {
+    font-family: "Poppins";
+    src: url("/font/Poppins-Regular.ttf");
+  }
+
+.sora {
+  font-family: Sora;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.poppins {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 400;
+}
