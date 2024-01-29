@@ -1,0 +1,46 @@
+// media
+@media (min-width: 996px) and (max-width: 1200px) {
+    :root {
+        font-size: 14px;
+    }
+
+    .hero-banner-container {
+        .banner-img {
+            min-width: 600px !important;
+            min-height: 100% !important;
+        }
+    }
+}
+
+@media (max-width: 996px) {
+    :root {
+        font-size: 12px;
+    }
+
+    .homepage-container {
+        .hero-banner-container {
+            height: calc(100vh - 76.88px) !important;
+            flex-direction: column;
+            justify-content: center !important;
+            padding: 10px !important;
+
+            .banner-text {
+                align-items: center;
+
+                .title {}
+            }
+
+            .banner-ellipse {
+                width: 50%;
+                height: 300px;
+                right: 100px !important;
+                bottom: 100px !important;
+            }
+
+            .banner-img {
+                background-image: url('/static/img/homepage/homepage-banner-mobile.svg') !important;
+                min-width: 90% !important;
+            }
+        }
+    }
+}
