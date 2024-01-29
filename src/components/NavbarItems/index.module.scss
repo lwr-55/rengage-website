@@ -1,0 +1,12 @@
+.mobile_buttom {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid #F2F4F7;
+    :global {
+        .button--block {
+            padding: 0.5rem;
+            border-radius: 0.6rem;
+            font-size: 1rem;
+        }
+    }
+}

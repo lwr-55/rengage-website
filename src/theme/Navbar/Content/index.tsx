@@ -1,10 +1,10 @@
-import React, {type ReactNode} from 'react';
-import {useThemeConfig, ErrorCauseBoundary} from '@docusaurus/theme-common';
+import React, { type ReactNode } from 'react';
+import { useThemeConfig, ErrorCauseBoundary } from '@docusaurus/theme-common';
 import {
   splitNavbarItems,
   useNavbarMobileSidebar,
 } from '@docusaurus/theme-common/internal';
-import NavbarItem, {type Props as NavbarItemConfig} from '@theme/NavbarItem';
+import NavbarItem, { type Props as NavbarItemConfig } from '@theme/NavbarItem';
 import NavbarColorModeToggle from '@theme/Navbar/ColorModeToggle';
 import SearchBar from '@theme/SearchBar';
 import NavbarMobileSidebarToggle from '@theme/Navbar/MobileSidebar/Toggle';
@@ -18,7 +18,7 @@ function useNavbarItems() {
   return useThemeConfig().navbar.items as NavbarItemConfig[];
 }
 
-function NavbarItems({items}: {items: NavbarItemConfig[]}): JSX.Element {
+function NavbarItems({ items }: { items: NavbarItemConfig[] }): JSX.Element {
   return (
     <>
       {items.map((item, i) => (
@@ -29,7 +29,7 @@ function NavbarItems({items}: {items: NavbarItemConfig[]}): JSX.Element {
               `A theme navbar item failed to render.
 Please double-check the following navbar item (themeConfig.navbar.items) of your Docusaurus config:
 ${JSON.stringify(item, null, 2)}`,
-              {cause: error},
+              { cause: error },
             )
           }>
           <NavbarItem {...item} />
@@ -70,7 +70,6 @@ export default function NavbarContent(): JSX.Element {
       left={
         // TODO stop hardcoding items?
         <>
-          {!mobileSidebar.disabled && <NavbarMobileSidebarToggle />}
           <NavbarLogo />
         </>
       }
@@ -80,7 +79,8 @@ export default function NavbarContent(): JSX.Element {
         // Ask the user to add the respective navbar items => more flexible
         <>
           <NavbarItems items={rightItems} />
-          <NavbarColorModeToggle className={styles.colorModeToggle} />
+          {/* <NavbarColorModeToggle className={styles.colorModeToggle} /> */}
+          {!mobileSidebar.disabled && <NavbarMobileSidebarToggle />}
           {!searchBarItem && (
             <NavbarSearch>
               <SearchBar />

@@ -15,7 +15,6 @@ function Footer(): JSX.Element | null {
 
   return (
     <FooterLayout
-      style={style}
       links={links && links.length > 0 && <FooterLinks links={links} />}
       logo={logo && <FooterLogo logo={logo} />}
       copyright={copyright && <FooterCopyright copyright={copyright} />}
