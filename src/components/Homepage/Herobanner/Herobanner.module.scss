@@ -1,3 +1,18 @@
+.primary-btn {
+    border-radius: 16px;
+    width: 260px;
+    background-color: #131A2B;
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+    border: 1px solid #131A2B;
+
+    &:hover {
+        background-color: #fff;
+        color: #131A2B;
+        border: 1px solid #131A2B;
+    }
+}
+
 .hero-banner-container {
     // height: calc(100vh - 34px - 40px);
     padding-left: 80px;

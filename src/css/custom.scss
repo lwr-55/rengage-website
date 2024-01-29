@@ -12,19 +12,10 @@
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-navbar-height: auto;
+  --ifm-heading-font-family: Poppins;
 }
 
-.primary-btn {
-  border-radius: 16px;
-  width: 260px;
-  background-color: #131A2B;
-  color: #fff;
-  transition: all 0.2s ease-in-out;
-  border: 1px solid #131A2B;
-
-  &:hover {
-    background-color: #fff;
-    color: #131A2B;
-    border: 1px solid #131A2B;
-  }
+:where(.button--secondary:not(:hover)) {
+  --ifm-button-border-color: #000;
 }

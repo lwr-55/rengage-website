@@ -26,7 +26,7 @@ export default function Homepage() {
                 <div className={styles['small']}>
                     Transform customer interactions into personalized experiences that drive loyalty and growth
                 </div>
-                <Link className={clsx('button button--lg primary-btn')}>watch how it works</Link>
+                <Link className={clsx('button button--lg', styles['primary-btn'])}>watch how it works</Link>
             </div>
             <div className={styles['banner-img']}>
                 <BannerImage />
